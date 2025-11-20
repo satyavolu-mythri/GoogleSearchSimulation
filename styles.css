@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    margin-top: 150px; /* Pushes the box down from the top */
+    background-color: #fff;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 584px; /* Standard Google search bar width */
+    position: relative; /* Essential for positioning the suggestion list */
+}
+
+/* Style for the search input box wrapper */
+.search-form {
+    display: flex;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px; /* Creates the rounded capsule shape */
+    transition: box-shadow 0.3s;
+}
+
+.search-input {
+    flex-grow: 1;
+    height: 44px;
+    border: none; /* Removes default border */
+    outline: none; /* Removes the default blue outline on focus */
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 24px;
+}
+
+/* Add the Google-like shadow effect on hover/focus */
+.search-form:hover, 
+.search-input:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent; /* Hides border when shadow is active */
+}
+
+/* Styling for the suggestion list */
+#suggestionsList {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border: 1px solid #dfe1e5;
+    border-top: none; 
+    border-radius: 0 0 8px 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: absolute; /* Allows list to float over other content */
+    width: 100%; /* Matches the width of the container */
+    z-index: 10;
+}
+
+#suggestionsList li {
+    padding: 10px 20px;
+    cursor: pointer; /* Changes mouse to a hand to indicate clicking */
+}
+
+#suggestionsList li:hover {
+    background-color: #f0f0f0; /* Light highlight on hover */
+}
